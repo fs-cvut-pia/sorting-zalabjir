@@ -18,7 +18,7 @@
 // Pole argv obsahuje jednotlive argumenty z prikazove radky
 std::string nazev_z_prikazove_radky(int argc, char* argv[]) {
     if (argc < 2)
-        throw std::runtime_error("Musite zadat nazev vstupniho souboru");
+        std::cout << "Musite zadat nazev vstupniho souboru";
 
     return std::string(argv[1]);
 }
@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
     nacti(nazev_vstupniho_souboru, jmena);
 
     std::cout << "Nacteno " << jmena.size() << " slov." << std::endl;
-    std::cout << "Serazuji slova ... " << std::endl;
+    std::cout << "Serazuji slova ... " << std::endl; 
 
     // Zacatek mereni CPU casu
     clock_t start = clock();
